@@ -5,10 +5,6 @@ import Login from './pages/signup/login';
 import Home from './pages/Home/Home';
 import Client from './pages/clients/clientsPage';
 import Overview from './pages/overview/Overview';
-import Overview from './pages/overview/Overview';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Home from './pages/Home/Home';
-import Client from './pages/clients/clientsPage';
 function App() {
   return (
     <Router>
