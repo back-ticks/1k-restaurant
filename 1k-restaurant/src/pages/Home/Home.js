@@ -8,7 +8,7 @@ const Home = () => {
         <div className="box-border">
             {/* home div */}
             <div className='flex  h-[86vh] justify-between'>
-                <div className=' h-full w-[55vw]'>
+                <div className=' h-full pt-4 pl-12 w-[55vw]'>
                     <Hero />
                 </div>
                 <div className="border h-full w-[40vw] bg-[#46A80F] rounded-b-[50%]">
@@ -18,7 +18,7 @@ const Home = () => {
             {/* home div */}
 
             {/* how it works */}
-            {/* <div>
+            <div cla>
                 <div>
                     <h1>How it works</h1>
                     <span></span>
@@ -28,7 +28,7 @@ const Home = () => {
                     <Card step={2} text='Create your restaurant profile' />
                     <Card step={3} text='Start receiving orders' />
                 </div>
-            </div> */}
+            </div>
             {/* how it works */}
 
              {   /* footer */}
