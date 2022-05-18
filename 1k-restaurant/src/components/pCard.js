@@ -2,7 +2,7 @@ import React from 'react'
 
 function Pcard(props) {
   return (
-    <div className='md:w-[420px] lg:w-[440px] sm:w-[300px] border-2 border-gray-300 p-3 rounded-lg'>
+    <div className='md:w-[420px] lg:w-[440px] sm:w-[300px] cursor-pointer hover:scale-105 transition duration-300 ease-in border-2 border-gray-300 p-3 rounded-lg'>
         <div className='flex justify-between'>
             <div className='flex gap-2'>
                 <div className='icon'>
