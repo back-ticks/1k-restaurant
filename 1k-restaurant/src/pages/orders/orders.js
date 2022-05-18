@@ -17,11 +17,11 @@ function Orders() {
                             <span className='text-2xl'>Orders</span>
                             <p className='text-md text-gray-500'>Monday 12, May 2022</p>
                         </div>
-                        <button className='px-20 py-8 border-2 rounded-lg text-xl border-[#46A80F]'> New</button>
-                        <button className='px-20 py-8 border rounded-lg text-xl text-white bg-[#46A80F] '> Delivered</button>
-                        <button className='px-20 py-8 border rounded-lg text-xl text-white bg-[#46A80F] '> Rejected</button>
-                        <button className='px-20 py-8 border rounded-lg text-xl text-white bg-[#46A80F] '> Waiting </button>
-                        <button className='px-20 py-8 border rounded-lg text-xl text-white bg-[#46A80F]'> All</button>
+                        <button className='px-10 py-4 border-2 rounded-lg text-xl border-[#46A80F]'> New</button>
+                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F] '> Delivered</button>
+                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F] '> Rejected</button>
+                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F] '> Waiting </button>
+                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F]'> All</button>
                     </div>
                     <div className='flex mt-6 gap-2 sticky top-20'>
                         <div className='left w-2/3  h-full'>

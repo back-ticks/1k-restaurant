@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Client from './pages/clients/clientsPage';
 import Overview from './pages/overview/Overview';
 import Orders from './pages/orders/orders';
+import Menu from './pages/menu/Menu';
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path='/orders' element={<Orders />} />
+        <Route path="/menu" element={<Menu />}/>
       </Routes>
     </Router>
   )
