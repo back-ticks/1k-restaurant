@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Signup from './pages/signup/Signup';
 import Login from './pages/signup/login';
 import Home from './pages/Home/Home';
+import CreateRestaurant from './pages/createRestaurant/CreateRestaurant';
 import Client from './pages/clients/clientsPage';
 import Overview from './pages/overview/Overview';
 import Orders from './pages/orders/orders';
@@ -11,6 +12,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path='/create' element={<CreateRestaurant/>} />
         <Route path="/" exact element={<Home />} />
         <Route path='/overview' element={<Overview />} />
         <Route path='/clients' element={<Client />} />
