@@ -9,10 +9,10 @@ const Card=(props)=>{
             </div>
             <div>
                 <div>
-                    <span>props.step</span>
+                    <span>{props.step}</span>
                 </div>
                 <div>
-                    <span>props.text</span>
+                    <span>{props.text}</span>
                 </div>
             </div>
         </div>
