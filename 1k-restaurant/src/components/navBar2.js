@@ -2,11 +2,11 @@ import React from 'react'
 import logo from '../img/logo.png'
 import './css/navbar.css'
 
-export default function NavBar(props) {
+export default function NavBar2(props) {
 
     const active  = "fill-white text-white bg-[#46A80F]"
   return (
-    <nav className='h-full bg-[#F3F3F3] w-[300px] sticky top-0 p-4'>
+    <nav className='h-screen bg-[#F3F3F3] w-[300px] sticky top-0 p-4'>
 
         <div className='brand'>
             <img src={logo} alt="logo" className='w-20 h-20 object-cover' />
@@ -19,15 +19,19 @@ export default function NavBar(props) {
                 </svg>
                 <span className='text-md font-normal'>Overview</span>
             </a>
-            <a href='/clients' className={`flex gap-2 items-center  p-2 px-4 rounded-full fill-black text-black hover:text-white hover:fill-white transition duration-300 hover:bg-[#46A80F] ease-in ${props.active === "clients" ? active: ""}`}>
-            <svg className='w-5 h-5 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336c0 8.844-7.156 16-16 16h-96C199.2 352 192 344.8 192 336V288H0v144C0 457.6 22.41 480 48 480h416c25.59 0 48-22.41 48-48V288h-192V336zM464 96H384V48C384 22.41 361.6 0 336 0h-160C150.4 0 128 22.41 128 48V96H48C22.41 96 0 118.4 0 144V256h512V144C512 118.4 489.6 96 464 96zM336 96h-160V48h160V96z"/></svg>
-                <span className='text-md font-normal'>Clients</span>
+            <a href='/tables' className={`flex gap-2 items-center  p-2 px-4 rounded-full fill-black text-black hover:text-white hover:fill-white transition duration-300 hover:bg-[#46A80F] ease-in ${props.active === "tables" ? active: ""}`}>
+            <svg className='w-5 h-5 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 32C483.3 32 512 60.65 512 96V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H448zM448 96H288V224H448V96zM448 288H288V416H448V288zM224 224V96H64V224H224zM64 416H224V288H64V416z"/></svg>
+                <span className='text-md font-normal'>Tables</span>
             </a>
-            <a href='/users' className={`flex gap-2 items-center  p-2 px-4 rounded-full fill-black text-black hover:text-white hover:fill-white transition duration-300 hover:bg-[#46A80F] ease-in ${props.active === "users" ? active: ""}`}>
+            <a href='/orders' className={`flex gap-2 items-center  p-2 px-4 rounded-full fill-black text-black hover:text-white hover:fill-white transition duration-300 hover:bg-[#46A80F] ease-in ${props.active === "orders" ? active: ""}`}>
                 <svg className='w-5 h-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                     <path d="M319.9 320c57.41 0 103.1-46.56 103.1-104c0-57.44-46.54-104-103.1-104c-57.41 0-103.1 46.56-103.1 104C215.9 273.4 262.5 320 319.9 320zM369.9 352H270.1C191.6 352 128 411.7 128 485.3C128 500.1 140.7 512 156.4 512h327.2C499.3 512 512 500.1 512 485.3C512 411.7 448.4 352 369.9 352zM512 160c44.18 0 80-35.82 80-80S556.2 0 512 0c-44.18 0-80 35.82-80 80S467.8 160 512 160zM183.9 216c0-5.449 .9824-10.63 1.609-15.91C174.6 194.1 162.6 192 149.9 192H88.08C39.44 192 0 233.8 0 285.3C0 295.6 7.887 304 17.62 304h199.5C196.7 280.2 183.9 249.7 183.9 216zM128 160c44.18 0 80-35.82 80-80S172.2 0 128 0C83.82 0 48 35.82 48 80S83.82 160 128 160zM551.9 192h-61.84c-12.8 0-24.88 3.037-35.86 8.24C454.8 205.5 455.8 210.6 455.8 216c0 33.71-12.78 64.21-33.16 88h199.7C632.1 304 640 295.6 640 285.3C640 233.8 600.6 192 551.9 192z"/>
                 </svg>
-                <span className='text-md font-normal'>Users</span>
+                <span className='text-md font-normal'>Orders</span>
+            </a>
+            <a href='/menu' className={`flex gap-2 items-center  p-2 px-4 rounded-full fill-black text-black hover:text-white hover:fill-white transition duration-300 hover:bg-[#46A80F] ease-in ${props.active === "menus" ? active: ""}`}>
+            <svg className='w-5 h-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+                <span className='text-md font-normal'>Menus</span>
             </a>
         </div>
 
