@@ -5,7 +5,7 @@ export default function NavBar(props) {
 
     const active  = "fill-white text-white bg-[#46A80F]"
   return (
-    <nav className='h-screen bg-[#F3F3F3] w-[300px] relative p-4 '>
+    <nav className='h-screen bg-[#F3F3F3] w-[300px] sticky top-0 p-4'>
 
         <div className='brand'>
             <img src={logo} alt="logo" className='w-20 h-20 object-cover' />
