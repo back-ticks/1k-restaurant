@@ -17,7 +17,7 @@ export default function CreateRestaurant() {
     <div className=''>
         <Header title={<img className='w-12 h-12' src={logo} alt="logo"/>} />
 
-        <div className='px-8 py-12 flex'>
+        <div className='px-8 py-12 flex justify-center items-center'>
             <div className='card relative bg-[#EDEDED] w-[300px] h-[300px]'>
                 <div className='bg-black opacity-20 h-[40%]'></div>
                 <div className='relative bottom-16 m-auto w-fit'>
