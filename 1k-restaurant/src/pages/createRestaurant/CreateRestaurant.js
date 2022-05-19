@@ -14,15 +14,14 @@ export default function CreateRestaurant() {
     //syles class
     const styleClass = "bg-[#46A80F] text-white"
   return (
-    <div className=''>
-        <Header title={<img className='w-12 h-12' src={logo} alt="logo"/>} />
+    <div className='w-full h-screen overflow-hidden'>
+        <Header img={profileImg} title={<img className='w-12 h-12' src={logo} alt="logo"/>} />
 
-        <div className='px-8 py-12 flex justify-center items-center'>
+        <div className='px-8 py-12 flex justify-center'>
             <div className='card relative bg-[#EDEDED] w-[300px] h-[300px]'>
                 <div className='bg-black opacity-20 h-[40%]'></div>
                 <div className='relative bottom-16 m-auto w-fit'>
                     <img className='w-[150px] h-[150px] object-cover rounded-full' src={profileImg} alt="Profile" />
-
                     <div className='pt-2'>
                         <h2 className='text-lg font-semibold text-center'>Mutesa Cedric</h2>
                         <p className='text-center text-gray-500'>The restaurant owner</p>
@@ -65,7 +64,7 @@ export default function CreateRestaurant() {
                 </div>
 
 
-                <div className='w-full p-6 border-2 border-gray-500 mt-5 rounded-sm'>
+                <div className='w-full p-10 border-2 border-gray-200  mt-5 rounded-md'>
                     {activeStep === 1 && <RestaurantInfo next={()=>setActiveStep(2)}/>}
                     {activeStep === 2 && <RestaurantType next={()=>setActiveStep(3)}/>}
                     {activeStep === 3 && <RestaurantMenu/>}
