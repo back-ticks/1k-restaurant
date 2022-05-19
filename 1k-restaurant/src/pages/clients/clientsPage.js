@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../../components/NavBar'
 import Header from '../../components/header'
 import profileImg from '../../img/test.png'
-import ClientDesc from '../../components/clientDesc'
+import clientCard from '../../components/clientCard'
 
 function Client() {
     return (
@@ -15,7 +15,7 @@ function Client() {
                         <p className='text-lg font-semibold px-4'>New Client</p>
                         <input type={'text'} placeholder='Add new client' className='border-b-2 border-gray-500 outline-none px-4'></input>
                     </div>
-                    <ClientDesc />
+                    <clientCard />
                 </div>
             </div>
         </div>
