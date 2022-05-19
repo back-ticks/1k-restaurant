@@ -11,7 +11,7 @@ function Orders() {
             <NavBar active="orders" />
             <div className='w-full' >
                 <Header img={profileImg} username="Mutesa Cedric"/>
-                <div className='body w-full border h-fit px-8 py-10 mt-4 rounded-xl ' >
+                <div className='body w-full border h-screen overflow-auto px-8 py-10 mt-4 rounded-xl ' >
                     <div className='flex justify-between items-center'>
                         <div className=''>
                             <span className='text-2xl'>Orders</span>
