@@ -3,9 +3,6 @@ import foodImage from '../signup/food.jpg'
 import { TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
-
-
-
 export default function SignUp() {
 
     const[state, setstate]=useState(false);
@@ -46,11 +43,13 @@ export default function SignUp() {
                         </div>
                         </div>
                         <div  className="flex flex-col  mt-4">
-                           <button type="button" className="flex rounded-md justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10  shadow-xl" >Sign up</button>
+                            <Link to='/create' className="w-full">
+                                   <button type="button" className="flex w-full border-none rounded-md justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10  shadow-xl" >Sign up</button>
+                            </Link>
                         </div>
                         <div className="flex flex-col mt-16">
                             <Link to='/login' className="no-underline">
-                           <h1 className="ml-16 no-underline text-black  text-xl">Already have an account? <a href="/login" className="font-extrabold text-[#D59101] no-underline">Log in</a></h1>
+                                <h1 className="ml-16 no-underline text-black  text-xl">Already have an account? <a href="/login" className="font-extrabold text-[#D59101] no-underline">Log in</a></h1>
                            </Link>
                         </div>
                         

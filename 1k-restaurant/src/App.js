@@ -24,7 +24,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path='/orders' element={<Orders />} />
         <Route path="/menu" element={<Menu />}/>
-      </Routes>
+      </Routes> 
     </Router>
   )
 }

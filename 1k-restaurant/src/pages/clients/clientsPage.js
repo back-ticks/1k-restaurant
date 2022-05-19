@@ -6,9 +6,9 @@ import ClientDesc from '../../components/clientsDesc'
 
 function Client() {
     return (
-        <div className='main w-[99%] flex flex-row'>
-            <NavBar active={'clients'} />
-            <div className='leftPart w-[80%] flex flex-col ml-2 items-center'>
+        <div className=' w-full h-screen flex-row flex overflow-hidden'>
+            <NavBar active={'clients'}/>
+            <div className='leftPart w-full overflow-auto flex flex-col ml-2 items-center'>
                 <Header title={'Clients'} img={profileImg} username={'Groot'} />
                 <div className='lists flex flex-col w-[100%] mt-2 h-[85%]'>
                     <div className='w-[100%] justify-evenly items-center'>

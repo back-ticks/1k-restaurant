@@ -39,8 +39,10 @@ export default function Login() {
                         </button>
                         </div>
                         </div>
-                        <div  className="flex flex-col">    
-                           <button type="button" className="flex rounded-md justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10  shadow-xl" >Sign up</button>
+                        <div  className="flex flex-col">   
+                        <Link to='/overview' className="w-full  ">
+                         <button type="button" className="flex w-full border-none rounded-md justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10  shadow-xl " >Log in</button>
+                        </Link> 
                         </div>
                         <div className="flex flex-col mt-16">
                         <Link to='/signup' className="no-underline">

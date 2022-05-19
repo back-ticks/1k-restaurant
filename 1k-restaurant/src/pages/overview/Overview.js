@@ -7,7 +7,7 @@ import {Chart as ChartJS,CategoryScale,LinearScale,PointElement,LineElement,Titl
 import {Line,Bar} from 'react-chartjs-2'
 import Pcard from '../../components/pCard';
 import rest from '../../img/rest.jpg'
-
+import {Link } from 'react-router-dom'
 
 
 const Overview = () => {
@@ -49,6 +49,7 @@ const Overview = () => {
 
      const data = {
         labels,
+        pointRadius: 2,
         datasets: [
           {
             label: 'Drinks',
@@ -96,7 +97,6 @@ const Overview = () => {
     return (
         <div className='w-screen max-w-screen overflow-x-hidden h-screen flex'>
             <NavBar active={'overview'} />
-
             <div className='w-full relative'>
                 <Header title={'Overview'} img={profileImg} username={"Mutesa Cedric"} />
 
@@ -146,10 +146,13 @@ const Overview = () => {
                             <span onClick={(e)=>{setSelectedOption(e.target.innerText);setDropdown(false) }} className='cursor-pointer rounded-md p-2 hover:bg-green-500 hover:text-white block'>Pub</span>
                           </div>}
 
+                          <Link to='/create'>
                           <button className='p-2 rounded-md bg-[#46A80F] opacity-90 hover:opacity-100 text-white text-sm w-[95%] flex items-center justify-center gap-4 absolute top-36 z-0 left-1'>
                             <span>Create now</span> 
                             <svg className='w-6 h-6 rounded-full fill-[#46A80F] bg-white p-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg> 
                           </button>
+                          </Link>
+                          
 
                           <div className='mt-full w-full absolute left-0 right-0 bottom-0'>
                             <img className='w-full h-[180px] object-cover rounded-md' src={rest} alt = "cover"/>

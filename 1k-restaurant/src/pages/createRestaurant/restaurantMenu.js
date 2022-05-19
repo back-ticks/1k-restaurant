@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function RestaurantMenu() {
   return (
-    <div className="flex flex-col text-[23px] justify-between">
+    <div className="flex flex-col text-[23px] justify-between overflow-auto">
       <div className="flex items-center justify-between w-full">
         <button className="px-10 py-4 border rounded-lg text-xl bg-[#46A80F] text-white">
           <span>Drink</span>
