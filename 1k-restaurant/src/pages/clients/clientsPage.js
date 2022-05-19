@@ -2,20 +2,20 @@ import React from 'react'
 import NavBar from '../../components/NavBar'
 import Header from '../../components/header'
 import profileImg from '../../img/test.png'
-import clientCard from '../../components/clientCard'
+import ClientDesc from '../../components/clientsDesc'
 
 function Client() {
     return (
-        <div className='main w-screen h-[100vh] flex flex-row justify-center'>
+        <div className='main w-[99%] flex flex-row'>
             <NavBar active={'clients'} />
-            <div className='leftPart h-full w-[77%] flex flex-col justify-between items-center'>
+            <div className='leftPart w-[80%] flex flex-col ml-2 items-center'>
                 <Header title={'Clients'} img={profileImg} username={'Groot'} />
-                <div className='lists flex h-[85%] flex-col w-[100%]'>
-                    <div className='new h-[10%] flex flex-col justify-evenly'>
+                <div className='lists flex flex-col w-[100%] mt-2 h-[85%]'>
+                    <div className='w-[100%] justify-evenly items-center'>
                         <p className='text-lg font-semibold px-4'>New Client</p>
-                        <input type={'text'} placeholder='Add new client' className='border-b-2 border-gray-500 outline-none px-4'></input>
+                        <input type={'text'} placeholder='Add new client' className='border-b-2 w-full border-gray-400 outline-none px-4'></input>
                     </div>
-                    <clientCard />
+                    <ClientDesc />
                 </div>
             </div>
         </div>
