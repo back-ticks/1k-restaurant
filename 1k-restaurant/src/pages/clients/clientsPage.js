@@ -13,7 +13,7 @@ function Client() {
                 <div className='lists flex flex-col w-[100%] mt-2 h-[85%]'>
                     <div className='w-[100%] justify-evenly items-center'>
                         <p className='text-lg font-semibold px-4'>New Client</p>
-                        <input type={'text'} placeholder='Add new client' className='border-b-2 w-full border-gray-500 outline-none px-4'></input>
+                        <input type={'text'} placeholder='Add new client' className='border-b-2 w-full border-gray-400 outline-none px-4'></input>
                     </div>
                     <ClientDesc />
                 </div>
