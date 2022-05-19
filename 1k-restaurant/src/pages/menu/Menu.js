@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar2 from '../../components/navBar2'
+import NavBar from '../../components/NavBar'
 import Header from '../../components/header'
 import MenuCard from '../../components/MenuCard'
 import profileImg from '../../img/test.png'
@@ -8,20 +8,20 @@ function Menu() {
     const num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     return (
         <div className='flex  h-screen overflow-hidden'>
-            <NavBar2 active="menus" />
+            <NavBar active="menus" username="Mutesa Cedric"/>
             <div className='w-full overflow-auto'>
-                <Header img={profileImg} />
+                <Header img={profileImg} username='Mutesa Cedric    '/>
                 <div className='body w-full border h-fit px-8 py-10 mt-4 rounded-xl ' >
                     <div className='flex justify-between items-center'>
                         <div className=''>
                             <span className='text-2xl'>Menus</span>
                             <p className='text-md text-gray-500'>Monday 12, May 2022</p>
                         </div>
-                        <button className='px-10 py-4 border-2 rounded-lg text-xl border-[#46A80F]'> Drinks </button>
-                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F] '> Starter</button>
-                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F] '> Appetizer</button>
-                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F] '> Desert </button>
-                        <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F]'> Main</button>
+                        <button className='px-10 py-2 border-2 rounded-lg text-xl border-[#46A80F]'> Drinks </button>
+                        <button className='px-10 py-2 border rounded-lg text-xl text-white bg-[#46A80F] '> Starter</button>
+                        <button className='px-10 py-2 border rounded-lg text-xl text-white bg-[#46A80F] '> Appetizer</button>
+                        <button className='px-10 py-2 border rounded-lg text-xl text-white bg-[#46A80F] '> Desert </button>
+                        <button className='px-10 py-2 border rounded-lg text-xl text-white bg-[#46A80F]'> Main</button>
                     </div>
                     <div className='flex mt-6 gap-2 sticky top-20 '>
                         <div className='left w-2/3  h-auto overflow-auto '>
