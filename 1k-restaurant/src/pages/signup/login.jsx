@@ -31,12 +31,12 @@ export default function Login() {
                         </div>
                         <div className="flex flex-col  mt-8">
                         <TextField id="input" label="Password" variant="outlined" size="small" type={state ? "text" : "password"}/>
-                        <div className="absolute w-8 bottom-[265px] right-[1020px]">
-                        <button className="button absolute bottom-[48px] right-[-70px]" onClick={toogleButton}>
-                           { state ? <AiOutlineEye size={25}/>:
-                               <AiOutlineEyeInvisible size={25}></AiOutlineEyeInvisible>
-                           } 
-                        </button>
+                        <div className="relative">
+                            <button className="button absolute right-2 -top-[30px]" onClick={toogleButton}>
+                            { state ? <AiOutlineEye size={20}/>:
+                                <AiOutlineEyeInvisible size={20}></AiOutlineEyeInvisible>
+                            } 
+                            </button>
                         </div>
                         </div>
                         <div  className="flex flex-col">   
