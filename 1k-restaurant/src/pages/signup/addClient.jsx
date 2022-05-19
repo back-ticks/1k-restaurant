@@ -1,7 +1,7 @@
 import React from "react";
 import foodImage from "../signup/food.jpg";
 import resto from "../../assets/images/resto.jpg";
-
+import { Link} from 'react-router-dom'
 export default function AddClient() {
   return (
     <div className=" h-screen flex font-['Nunito']">
@@ -48,7 +48,9 @@ export default function AddClient() {
               <input type="text" placeholder="Phone" className="border-b-2 pl-2 h-10 rounded-sm active:border-blue-600 "></input>
           </div>
           <div className="mt-10">
-        <button type="button" className="flex  justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10 w-36  shadow-xl" >Add client</button>
+            <Link to='/clients'>
+               <button type="button" className="flex  justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10 w-36  shadow-xl" >Add client</button>
+            </Link>
           </div>
         
         </div>

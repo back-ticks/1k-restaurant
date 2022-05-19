@@ -14,7 +14,7 @@ export default function CreateRestaurant() {
     //syles class
     const styleClass = "bg-[#46A80F] text-white"
   return (
-    <div className='w-full h-screen overflow-hidden'>
+    <div className='w-full h-screen overflow-auto'>
         <Header img={profileImg} title={<img className='w-12 h-12' src={logo} alt="logo"/>} />
 
         <div className='px-8 py-12 flex justify-center'>
