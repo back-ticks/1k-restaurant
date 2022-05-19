@@ -6,7 +6,6 @@ import profileImg from '../../img/test.png'
 import {Chart as ChartJS,CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Legend,} from 'chart.js'
 import {Line,Bar} from 'react-chartjs-2'
 import Pcard from '../../components/pCard';
-import rest from '../../img/rest.jpg'
 
 
 
@@ -120,13 +119,13 @@ const Overview = () => {
                 </div>
 
                 <div className='flex relative'>
-                  <div className="cards flex flex-wrap gap-5 p-7 pb-9">
+                  <div className="cards flex flex-wrap gap-2 p-7 pb-9">
                       <Pcard type="Restaurants" items={resto_Items} />
                       <Pcard type="Hotels" items={resto_Items} />
                       <Pcard type="Pubs" items={resto_Items} />
                       <Pcard type="Cafe" items={resto_Items} />
                   </div>
-                  <div className='mt-8 w-[300px] h-[380px] p-2 border-2 border-gray-300 absolute z-10 right-2 rounded-md pb-0'>
+                  <div className='mt-8 h-[380px] p-2 border-2 border-gray-300 absolute z-10 right-2 rounded-md'>
                     <div className='title text-center'>
                       <h3 className='text-lg font-medium'>Create new</h3>
                     </div>
@@ -151,8 +150,8 @@ const Overview = () => {
                             <svg className='w-6 h-6 rounded-full fill-[#46A80F] bg-white p-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg> 
                           </button>
 
-                          <div className='mt-full w-full absolute left-0 right-0 bottom-0'>
-                            <img className='w-full h-[180px] object-cover rounded-md' src={rest} alt = "cover"/>
+                          <div className=''>
+                              
                           </div>
                       </div>
                     </div>
