@@ -3,7 +3,7 @@ import foodImage from '../signup/food.jpg'
 import { TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 
 export default function SignUp() {
@@ -20,7 +20,7 @@ export default function SignUp() {
             <div>
                 <div className="flex flex-col container ml-auto mr-auto">
                     <div className="heading mt-16">
-                        <h className="font-extrabold text-3xl ml-52 tracking-wide  text-[#46A80F] font-Nunito">Create a new account</h>
+                        <h className="font-extrabold text-3xl ml-[250px] tracking-wide  text-[#46A80F] font-Nunito">Create a new account</h>
                     </div>
                     <div className="form mt-16 gap-11  ml-auto mr-auto  w-[450px] ">
                         <div className="flex flex-col">
@@ -38,7 +38,7 @@ export default function SignUp() {
                         <div className="flex flex-col  mt-4">
                         <TextField id="input" label="Password" variant="outlined" size="small" type={state ? "text" : "password"}/>
                         <div className="absolute w-8 bottom-[265px] right-[1020px]">
-                        <button className="button absolute bottom-[43px] right-[-70px]" onClick={toogleButton}>
+                        <button className="button absolute bottom-[74px] right-[-70px]" onClick={toogleButton}>
                            { state ? <AiOutlineEye size={25}/>:
                                <AiOutlineEyeInvisible size={25}></AiOutlineEyeInvisible>
                            } 

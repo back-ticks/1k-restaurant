@@ -1,6 +1,5 @@
 import React from "react";
 import foodImage from "../signup/food.jpg";
-// @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 import resto from "../../assets/images/resto.jpg";
 
 export default function AddClient() {
