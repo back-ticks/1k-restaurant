@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import foodImage from '../signup/food.jpg'
+import './responsive.css'
 
 export default function SignUp() {
- 
+
+    const [fname,setFname] = useState("")
+    const [lname,setLname] = useState("")
+    const [phone,setPhone] = useState("")
+    const [email ,setEmail] = useState("")
+    const [password,setPassword] = useState("")
+
+    const handleSubmit = ()=>{
+
+        //Validation is done on the backend so I'll display the backend msg
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+        "email": email,
+        "firstName": fname,
+        "lastName": lname,
+        "mobile": phone,
+        "password": password
+        });
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+        };
+
+        fetch("http://196.223.240.154:8099/supapp/api/auth/admin/signup", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+
+
+    }
+        
   return (
     <div className="bg-green-500 h-screen flex">
         <div className="bg-white w-3/6 h-screen ">
