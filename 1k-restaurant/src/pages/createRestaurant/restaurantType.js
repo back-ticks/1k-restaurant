@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function RestaurantType(props) {
   return (
-    <div className="flex flex-col text-[23px] justify-between pr-24">
+    <div className="flex flex-col text-[23px] justify-between pr-24 overflow-auto">
       <div className="flex flex-col mb-4">
         <h1 className="pb-4">Restaurant Type (restaurant, hotel, coffeshop, other)</h1>
         <input type="text" placeholder="Restaurant" className="border outline-none focus:border-gray-500 border-gray-300 px-4 py-1 rounded-[5px] mb-4 placeholder:text-[#8A8A8A] placeholder:text-[20px]" />
