@@ -49,7 +49,7 @@ const Overview = () => {
 
      const data = {
         labels,
-        pointRadius: 8,
+        pointRadius: 12,
         datasets: [
           {
             label: 'Drinks',
