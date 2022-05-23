@@ -61,7 +61,13 @@ export default function SignUp() {
                         setError(result.apierror.details[key])
                     }
                 }
-            }else{
+            }else if(result.success === "true"){
+                //There is no JWT KEY so ==>
+                const user = {
+                    email: email,
+                    phone: phone
+                }
+                localStorage.setItem('1k_user',JSON.stringify(user))
                 navigate('/create')
             }
         })

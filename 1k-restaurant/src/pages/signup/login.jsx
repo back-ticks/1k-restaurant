@@ -16,6 +16,10 @@ export default function Login() {
         setstate(prevstate => !prevstate);
     }
 
+    const HandleLogin = ()=>{
+        
+    }
+
   return (
     <div className=" h-screen flex font-['Nunito']">
         <div className="bg-white w-3/6 h-screen ">
