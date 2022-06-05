@@ -35,11 +35,11 @@ function Orders() {
                                 <p className='text-center'> Create new order manually</p>
                                 <hr className='mb-4' />
                                 <div className='options flex flex-col'>
-                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" className='mr-4  ' /> Dessert</label>
-                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" className='mr-4  ' /> Main</label>
-                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" className='mr-4  ' /> Drink</label>
-                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" className='mr-4  ' /> Appetizer</label>
-                                    <label htmlFor='dessert' className='text-xl py-2 px-5  '> <input type="radio" className='mr-4  ' /> Starter</label>
+                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" name="o_class" className='mr-4  ' /> Dessert</label>
+                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" name="o_class"  className='mr-4  ' /> Main</label>
+                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" name="o_class"  className='mr-4  ' /> Drink</label>
+                                    <label htmlFor='dessert' className='text-xl py-2 px-5 border-b '> <input type="radio" name="o_class"  className='mr-4  ' /> Appetizer</label>
+                                    <label htmlFor='dessert' className='text-xl py-2 px-5  '> <input type="radio" name="o_class"  className='mr-4  ' /> Starter</label>
                                 </div>
                             </div>
                             <div className='w-full border py-2 px-2  bg-gray-100 rounded-xl mt-2'>

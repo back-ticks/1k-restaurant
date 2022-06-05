@@ -49,21 +49,23 @@ const Overview = () => {
 
      const data = {
         labels,
-        pointRadius: 8,
         datasets: [
           {
+            pointRadius: 8,
             label: 'Drinks',
             data: [12,24,41,55,66,70,89],
             borderColor: 'rgba(51, 160, 44, 1)',
             backgroundColor: 'rgba(51, 160, 44, 1)',
           },
           {
+              pointRadius: 8,
             label: 'Appetizzer',
             data: [13,43,56,77,85,86,57,70],
             borderColor: 'rgba(31, 120, 180, 1)',
             backgroundColor: 'rgba(31, 120, 180, 1)',
           },
           {
+              pointRadius: 8,
             label: 'Pizza',
             data: [35,63,63,71,53,46,60],
             borderColor: 'rgba(166, 206, 227, 1)',
