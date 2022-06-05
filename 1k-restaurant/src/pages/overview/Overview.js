@@ -122,13 +122,13 @@ const Overview = () => {
                 </div>
 
                 <div className='flex relative'>
-                  <div className="cards flex flex-wrap gap-5 p-7 pb-9">
+                  <div className="cards flex flex-wrap gap-2 p-7 pb-9">
                       <Pcard type="Restaurants" items={resto_Items} />
-                      <Pcard type="Hotels" items={resto_Items} />
-                      <Pcard type="Pubs" items={resto_Items} />
-                      <Pcard type="Cafe" items={resto_Items} />
+                      <Pcard type="Hotels" items={hotel_Items} />
+                      <Pcard type="Pubs" items={pubs_Items} />
+                      <Pcard type="Cafe" items={cafe_Items} />
                   </div>
-                  <div className='mt-8 w-[300px] h-[380px] p-2 border-2 border-gray-300 absolute z-10 right-2 rounded-md pb-0'>
+                  <div className='mt-8 h-[380px] p-2 border-2 border-gray-300 absolute z-10 right-2 rounded-md'>
                     <div className='title text-center'>
                       <h3 className='text-lg font-medium'>Create new</h3>
                     </div>
@@ -157,6 +157,7 @@ const Overview = () => {
                         
                           <div className='mt-full w-full absolute left-0 right-0 bottom-0'>
                             <img className='w-full h-[180px] object-cover rounded-md' src={rest} alt = "cover"/>
+
                           </div>
                       </div>
                     </div>

@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import foodImage from '../signup/food.jpg'
+import './responsive.css'
 import React,{useState} from "react";
 import foodImage from '../signup/food.jpg'
 import { TextField } from '@mui/material';
@@ -11,6 +14,7 @@ export default function SignUp() {
 
         setstate(prevstate => !prevstate);
     }
+
 
     //Inputs
 
@@ -75,7 +79,7 @@ export default function SignUp() {
 
      
     }
- 
+    
   return (
     <div className=" h-screen flex font-['nunito']">
         <div className="bg-white w-3/6 h-screen ">

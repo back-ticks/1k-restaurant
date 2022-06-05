@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export default function Header(props) {
     const [searchTxt,setSearchTxt] = useState("")
   return (
-    <header className='flex justify-between w-full p-2 px-8 items-center z-10 bg-white shadow pb-4 sticky top-0'>
+    <header className='flex justify-between w-full  p-2 px-8 items-center z-10 bg-white shadow pb-4 sticky top-0'>
         <div className='title'>
             <h2 className='text-xl font-semibold'>{props.title}</h2>
         </div>
