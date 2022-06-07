@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../components/NavBar'
 import Header from '../../components/header'
+import axios from 'axios'
 import MenuCard from '../../components/MenuCard'
 
 function Menu() {
+const [loading,setLoading]  = useState(false)
+const [menuitems, setMenuitems] = useState(null)
+
+  useEffect(()=> {
+//setLoading(true)
+    console.log("Hello WOrld");
+     const getMenus = async () => {
+     const response = await axios.get("https://196.223.240.154:8099/supapp/api/menu-items")
+     setMenuitems(response)
+    }
+    getMenus();
+   // setLoading(false);
+        
+  },[])
 
     const num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     return (
@@ -24,11 +39,14 @@ function Menu() {
                         <button className='px-10 py-4 border rounded-lg text-xl text-white bg-[#46A80F]'> Main</button>
                     </div>
                     <div className='flex mt-6 gap-2 sticky top-20'>
-                        <div className='left w-2/3  h-full'>
+                     {!loading && (   <div className='left w-2/3  h-full'>
                             {num.map((number) => (
                                 <MenuCard />
                             ))}
-                        </div>
+                        </div>)}
+                       {loading && ( <div className='left w-2/3  h-[60vh] flex items-center justify-center'>
+                            Loading...
+                        </div>)}
                         <div className='w-1/3 sticky bottom-60'>
                             <div className='w-full border py-2 px-2  bg-gray-100 rounded-xl'>
                                 <h1 className='text-xl font-bold '>Add Menu item</h1>
