@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import foodImage from '../signup/food.jpg'
 import './responsive.css'
-import React,{useState} from "react";
-import foodImage from '../signup/food.jpg'
 import { TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
