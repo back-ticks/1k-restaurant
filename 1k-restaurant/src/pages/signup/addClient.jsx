@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import foodImage from "../signup/food.jpg";
 import resto from "../../assets/images/resto.jpg";
 import { Link} from 'react-router-dom'
 export default function AddClient() {
+
+
+  const [name,setName] = useState("")
+  const [category,setCategory] = useState("")
+  const [email,setEmail] = useState("")
+  const [address,setAdress] = useState("")
+  const [phone,setPhone] = useState("")
+
+
   return (
     <div className=" h-screen flex font-['Nunito']">
       <div
