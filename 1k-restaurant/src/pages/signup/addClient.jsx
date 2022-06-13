@@ -10,6 +10,10 @@ export default function AddClient() {
   const [email,setEmail] = useState("")
   const [address,setAdress] = useState("")
   const [phone,setPhone] = useState("")
+  const [date,setDate] = useState("");
+  const [representative,setRepresentative] = useState("")
+  const [loading,setLoading] = useState(false)
+
 
 
   return (
@@ -24,17 +28,18 @@ export default function AddClient() {
       >
         <div className=" ml-auto mr-auto mt-60">
           <h className="text-3xl text-white font-extrabold">Add client</h>
+            <p className="text-white mt-3 mr-5">Fill in all the client details</p>
         </div>
       </div>
       <div className="bg-white w-[900px] h-screen flex ">
         <div className=" w-[650px] ml-auto mr-auto mt-12" >
           <div className="flex flex-col">
               <label className="font-bold">Client name</label>
-              <input type="text" placeholder="client's name" className=" border-b-2 pl-2 h-10 outline-none focus:border-b-black"></input>
+              <input value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="client's name" className=" border-b-2 pl-2 h-10 outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Category</label>
-              <input type="text" placeholder="Choose cattegory" className=" border-b-2 pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+              <input value={cate} type="text" placeholder="Choose cattegory" className=" border-b-2 pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Representantive</label>
@@ -42,7 +47,7 @@ export default function AddClient() {
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Date of creation</label>
-              <input type="text" placeholder="Month and year" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+              <input type="date" placeholder="Month and year" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Address</label>

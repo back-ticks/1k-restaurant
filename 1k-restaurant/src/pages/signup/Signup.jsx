@@ -5,6 +5,7 @@ import { TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
 import {useNavigate} from 'react-router-dom'
+import { useEffect } from "react";
 export default function SignUp() {
     const navigate  = useNavigate()
     const[state, setstate]=useState(false);
@@ -26,6 +27,58 @@ export default function SignUp() {
     //Error variable
 
     const [error, setError] = useState("")
+
+
+    useEffect(()=>{
+
+        if(JSON.parse(localStorage.getItem("access_token"))){
+            navigate('/overview')
+        }
+    },[])
+
+    const login = ()=>{
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        const raw = JSON.stringify({
+        "login": email,
+        "password": password
+        });
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+        };
+
+        fetch("https://backend.supamenu.rw/supapp/api/auth/signin", requestOptions)
+        .then(response => response.json())
+        .then((result)=>{
+            setLoading(false)
+            console.log(result)
+            if(result.apierror){
+                setError("Incorrenct email or password")
+            }else{
+                if(result.token){
+                    localStorage.setItem("access_token", JSON.stringify(result.token.accessToken))
+                    localStorage.setItem('refresh_token', JSON.stringify(result.token.refreshToken))
+                    const user = {
+                        fname: result.firstName,
+                        lname: result.lastName,
+                        email: result.email,
+                    }
+                    localStorage.setItem("user", JSON.stringify(user))
+                    navigate("/overview")
+                }
+            }
+
+        })
+        .catch((error)=>{
+            setLoading(false)
+            setError("Something went wrong !")
+        });
+    }
 
     const handleSubmit = (e)=>{
         e.preventDefault()
@@ -67,13 +120,8 @@ export default function SignUp() {
                 }
             }else{
                 setLoading(false)
-                //There is no JWT KEY so ==>
-                const user = {
-                    email: email,
-                    phone: phone
-                }
-                localStorage.setItem('1k_user',JSON.stringify(user))
-                navigate('/create')
+
+                login()
             }
         })
         .catch((error) => {
