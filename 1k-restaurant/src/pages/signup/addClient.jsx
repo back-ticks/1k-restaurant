@@ -10,11 +10,13 @@ export default function AddClient() {
   const [email,setEmail] = useState("")
   const [address,setAdress] = useState("")
   const [phone,setPhone] = useState("")
-  const [date,setDate] = useState("");
+  const [date,setDate] = useState("2022-02-05");
   const [representative,setRepresentative] = useState("")
   const [loading,setLoading] = useState(false)
+  const [o_hours,setO_hours] = useState("12:00")
+  const [c_hours,setC_hours] = useState("21:00")
 
-
+  console.log(localStorage.getItem("access_token"))
 
   return (
     <div className=" h-screen flex font-['Nunito']">
@@ -38,33 +40,35 @@ export default function AddClient() {
               <input value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="client's name" className=" border-b-2 pl-2 h-10 outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
-              <label className="font-bold">Category</label>
-              <input value={cate} type="text" placeholder="Choose cattegory" className=" border-b-2 pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+              <label className="font-bold">Opening hours</label>
+              <input value={o_hours} onChange={(e)=>setO_hours(e.target.value)}  type="time" placeholder="opening hours" className=" border-b-2 pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+          </div>
+          <div className="flex flex-col mt-4">
+              <label className="font-bold">Closing hours</label>
+              <input value={c_hours} onChange={(e)=>setC_hours(e.target.value)}  type="time" placeholder="closing hours" className=" border-b-2 pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Representantive</label>
-              <input type="text" placeholder="Names" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+              <input value={representative} onChange={(e)=>setRepresentative(e.target.value)} type="text" placeholder="Names" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Date of creation</label>
-              <input type="date" placeholder="Month and year" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+              <input value={date} onChange={(e)=>setDate(e.target.value)} type="date" placeholder="Month and year" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Address</label>
-              <input type="text" placeholder="province, district, sector, cell" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+              <input value={address} onChange={(e)=>setAdress(e.target.value)} type="text" placeholder="province, district, sector, cell" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Email</label>
-              <input type="text" placeholder="Email" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
+              <input value={email} onChange={(e)=>setEmail(e.target.value)} type="text" placeholder="Email" className="border-b-2  pl-2 h-10 rounded-sm outline-none focus:border-b-black"></input>
           </div>
           <div className="flex flex-col mt-4">
               <label className="font-bold">Phone</label>
-              <input type="text" placeholder="Phone" className="border-b-2 pl-2 h-10 rounded-sm active:border-blue-600 outline-none focus:border-b-black "></input>
+              <input value={phone} onChange={(e)=>setPhone(e.target.value)} type="text" placeholder="Phone" className="border-b-2 pl-2 h-10 rounded-sm active:border-blue-600 outline-none focus:border-b-black "></input>
           </div>
           <div className="mt-10">
-            <Link to='/clients'>
-               <button type="button" className="flex  justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10 w-36  shadow-xl outline-none focus:border-b-black" >Add client</button>
-            </Link>
+            <button type="button" className="flex  justify-center items-center text-white font-bold border-2 bg-[#46A80F] mt-10 h-10 w-36  shadow-xl outline-none focus:border-b-black" >Add client</button>
           </div>
         
         </div>
